@@ -1,0 +1,36 @@
+/* .poll {
+  height: 60vh;
+
+}
+
+@media screen and (max-width: 900px) {
+  .poll {
+    height: 40vh;
+  }
+} */
+.poll{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  padding: 40px;
+  min-height: 50vh;
+  min-width: 50vh;
+}
+
+@media screen and (max-width: 900px) {
+  .poll {
+    min-height: 30vh;
+    min-width: 30vh;
+
+  }
+} 
+
+@media screen and (max-width: 600px) {
+  .poll {
+    min-height: 20vh;
+    min-width: 20vh;
+
+  }
+} 

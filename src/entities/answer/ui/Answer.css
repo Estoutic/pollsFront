@@ -1,0 +1,13 @@
+.answer{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    padding: 20px;
+    width: 100%;
+}
+
+@media screen and (max-width:600px) {
+    .answer{
+        padding: 10px;
+    }
+}

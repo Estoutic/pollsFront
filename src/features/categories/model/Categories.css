@@ -1,0 +1,11 @@
+.categories{
+    display: flex;
+    gap: calc(var(--index) * 8);
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.categories a{
+    font-size: calc(var(--index) * 0.8);
+
+}
