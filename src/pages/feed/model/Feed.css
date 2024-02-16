@@ -1,12 +1,14 @@
-.feed{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 100px;
-    min-height: 100vh;
+.feed {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 100px;
+  min-height: 100vh;
+  width: min(100% - 32px, 1296px);
 }
 
-.container{
-    display: flex;
-    flex-direction: row;
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }

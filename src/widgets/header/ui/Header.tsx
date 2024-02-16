@@ -9,8 +9,9 @@ const Header = ({ className, ...rest }: Props) => {
   const classes = ["header", className].join(" ");
   return (
     <div className={classes}>
-      <h1>Polls</h1>
-
+      <div className="top-container">
+        <h1>Polls</h1>
+      </div>
       <Categories></Categories>
     </div>
   );

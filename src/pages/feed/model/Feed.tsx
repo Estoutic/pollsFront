@@ -1,6 +1,6 @@
 import React from "react";
 import { IBaseComponentProps } from "src/shared/types";
-import { Cloud, Header, Poll } from "../../..//widgets";
+import { Header, Poll } from "../../..//widgets";
 import "./Feed.css";
 
 type Props = IBaseComponentProps;
@@ -11,12 +11,8 @@ const Feed = ({ className, ...rest }: Props) => {
   return (
     <>
       <div className={classes}>
-        {/* <Header></Header> */}
-        {/* <Poll></Poll> */}
-        <Cloud className="one"></Cloud>
-        <Cloud className="two"></Cloud>
-        <Cloud className="one"></Cloud>
-        <Cloud className="two"></Cloud>
+        <Header></Header>
+        {/* <Poll></Poll>  */}
       </div>
     </>
   );
