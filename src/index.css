@@ -12,28 +12,31 @@
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   background: rgb(255, 254, 248);
   background: white;
-  --second-col: rgba(44, 79, 9, 0.87);
+  --second-col: rgba(212, 23, 54, 0.87);
   --index: 1vh + 1vw;
+  --text-color: #fafafa;
 }
 
 body {
   margin: 0;
   display: flex;
   place-items: start;
-
+  background-image: url("/bg.jpg");
+  background-size: 50px;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 h1 {
   font-size: calc(var(--index) * 1.2);
   line-height: 1.1;
   font-weight: 400;
-  color: black;
+  color: var(--text-color);
 }
 
 a {
   font-size: calc(var(--index));
-  color: black;
+  color: var(--text-color);
   cursor: pointer;
   transition: color 0.5s;
 }
@@ -42,10 +45,18 @@ a:hover {
 }
 
 p {
-  color: black;
+  color: var(--text-color);
   font-size: calc(var(--index) * 1.5);
 }
 
+
+img {
+  position: absolute;
+  width: calc(var(--index) * 55);
+  left: 45vw;
+  top: 14vh;
+  z-index: 0;
+}
 .vkuiText,
 .vkuiParagraph,
 .vkuiFormItem__top {

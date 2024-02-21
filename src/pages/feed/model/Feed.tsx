@@ -9,12 +9,10 @@ const Feed = ({ className, ...rest }: Props) => {
   const classes = ["feed", className].join(" ");
 
   return (
-    <>
-      <div className={classes}>
-        <Header></Header>
-        {/* <Poll></Poll>  */}
-      </div>
-    </>
+    <div className={classes}>
+      <Header></Header>
+      <Poll></Poll> 
+    </div>
   );
 };
 

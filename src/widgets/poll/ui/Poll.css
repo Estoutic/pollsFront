@@ -8,7 +8,7 @@
     height: 40vh;
   }
 } */
-.poll{
+.poll {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,18 +19,21 @@
   min-width: 50vh;
 }
 
+.poll-container {
+  display: flex;
+  justify-content: center;
+}
+
 @media screen and (max-width: 900px) {
   .poll {
     min-height: 30vh;
     min-width: 30vh;
-
   }
-} 
+}
 
 @media screen and (max-width: 600px) {
   .poll {
     min-height: 20vh;
     min-width: 20vh;
-
   }
-} 
+}

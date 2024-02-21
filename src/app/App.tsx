@@ -1,10 +1,14 @@
 import React from "react";
+import { QueryClient, QueryClientProvider } from "react-query";
 import Feed from "../pages";
 
 function App() {
+  const queryClient = new QueryClient();
   return (
     <>
-      <Feed></Feed>
+      <QueryClientProvider client={queryClient}>
+        <Feed></Feed>
+      </QueryClientProvider>
     </>
   );
 }

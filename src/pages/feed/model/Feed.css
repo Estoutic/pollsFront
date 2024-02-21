@@ -1,14 +1,19 @@
 .feed {
   display: flex;
-  align-items: center;
   flex-direction: column;
   gap: 100px;
   min-height: 100vh;
-  width: min(100% - 32px, 1296px);
+  min-width: 100vw;
 }
 
 .container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  padding: 0 7vh;
+  z-index: 1;
+
+}
+
+
+.title {
+  font-size: calc(var(--index) * 14);
+  font-weight: 300;
 }

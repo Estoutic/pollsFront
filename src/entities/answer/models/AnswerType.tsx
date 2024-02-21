@@ -1,6 +1,7 @@
-type AnswerType = {
-    title: string;
-    votes: number;
-}
+type IAnswerType = {
+  pollId?: string;
+  description: string;
+  count: number;
+};
 
-export default AnswerType;
+export default IAnswerType;

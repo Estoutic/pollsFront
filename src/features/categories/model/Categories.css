@@ -1,6 +1,7 @@
 .categories{
     display: flex;
     gap: calc(var(--index) * 3);
+    margin-top: 5px;
 }
 
 .categories a{

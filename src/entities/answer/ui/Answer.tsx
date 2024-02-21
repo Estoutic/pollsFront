@@ -1,12 +1,12 @@
 import React from "react";
 import { IBaseComponentProps } from "src/shared/types";
-import AnswerType from "../models/AnswerType";
+import IAnswerType from "../models/AnswerType";
 import "./Answer.css";
 import { Paragraph, Text, Tappable, Progress, FormItem } from "@vkontakte/vkui";
 
-type Props = IBaseComponentProps & AnswerType;
+type Props = IBaseComponentProps & IAnswerType;
 
-const Answer = ({ className, title, votes, ...rest }: Props) => {
+const Answer = ({ className, description, count, ...rest }: Props) => {
   const classes = ["answer", className].join(" ");
   return (
     <Tappable
@@ -16,8 +16,8 @@ const Answer = ({ className, title, votes, ...rest }: Props) => {
       hasActive
       hasHover
     >
-      <FormItem id="progresslabel" top={title}>
-        <Progress aria-labelledby="progresslabel" appearance="positive" value={votes} />
+      <FormItem id="progresslabel" top={description}>
+        <Progress aria-labelledby="progresslabel" appearance="negative" value={count} />
       </FormItem>
     </Tappable>
   );

@@ -8,12 +8,10 @@ type Props = IBaseComponentProps;
 const Header = ({ className, ...rest }: Props) => {
   const classes = ["header", className].join(" ");
   return (
-    <div className={classes}>
-      <div className="top-container">
-        <h1>Polls</h1>
-      </div>
+    <header className={classes}>
+      <h1>Polls</h1>
       <Categories></Categories>
-    </div>
+    </header>
   );
 };
 
