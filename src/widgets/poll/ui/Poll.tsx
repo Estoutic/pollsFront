@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Answer, IAnswerType } from "../../../entities";
 import { IBaseComponentProps } from "src/shared/types";
 import { View, Group, CardGrid, Card, Title } from "@vkontakte/vkui";
@@ -14,18 +14,22 @@ const Poll = ({ className, ...rest }: Props) => {
   const classes = ["poll", className];
   const pollType: IPollType = "all";
 
-  const [disabled, setDisabled] = useState(false);
   const { data, isError, isLoading, isSuccess } = usePolls({ pollType });
-
   const addPoll = useStore(({ addPoll }) => addPoll);
+  const checkPoll = useStore(({ checkPoll }) => checkPoll);
 
   console.log(data);
 
+  const [key, setKey] = useState(Date.now());
+
+  useEffect(() => {
+    console.log("Component re-rendered with key:", key);
+  }, [key]);
+
   const onClick = (pollId: string, questionId: string, answerId: string) => {
     console.log(pollId, questionId, answerId);
-    setDisabled(true);
-
     addPoll(pollId, questionId, answerId);
+    setKey(Date.now());
   };
 
   return (
@@ -35,7 +39,9 @@ const Poll = ({ className, ...rest }: Props) => {
           <Group mode="plain" key={poll.pollId}>
             <Card
               mode="shadow"
-              className={`${classes.join(" ")} `}
+              className={`${classes.join(" ")} ${
+                checkPoll(poll.pollId) ? "disabled" : ""
+              }`}
             >
               <Title level="1">{poll.question.description}</Title>
               {poll.answers.map((answer) => (
