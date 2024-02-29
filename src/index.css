@@ -59,8 +59,9 @@ img {
 }
 .vkuiText,
 .vkuiParagraph,
+.vkuiTitle--level-1,
 .vkuiFormItem__top {
-  font-size: calc(var(--index) * 1.5);
+  font-size: calc(var(--index) * 1);
   color: black;
   font-weight: 400;
   font-family: "Roboto", sans-serif !important;
@@ -68,6 +69,7 @@ img {
 }
 
 .vkuiFormItem__top {
+  font-size: calc(var(--index) * 0.8);
   text-align: start;
   display: flex;
   padding: 10px 0 10px 0;
@@ -84,4 +86,18 @@ img {
   flex-wrap: nowrap;
   flex-direction: column;
   width: 100%;
+}
+
+.vkuiCard{
+  max-width: calc(var(--index) * 3);
+  
+}
+
+.vkuiInternalGroup{
+  display: flex;
+  justify-content: center;
+}
+
+.vkuiSeparator__in{
+  display: none;
 }

@@ -8,9 +8,9 @@ type Params = { pollType: IPollType };
 
 const usePolls = ({ pollType }: Params) => {
   const queryKey = fontPackKeys.all(pollType);
-  const queryFn = () => pollApi.version();
+  const queryFn = () => pollApi.getAllPolls();
 
-  return useQuery({ queryKey, queryFn });
+  return useQuery({ queryKey, queryFn, keepPreviousData:true, refetchOnWindowFocus:false});
 };
 
 export default usePolls;
