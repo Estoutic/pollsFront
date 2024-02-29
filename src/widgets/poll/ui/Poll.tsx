@@ -6,6 +6,7 @@ import "@vkontakte/vkui/dist/vkui.css";
 import "./Poll.css";
 import usePolls from "../api/hooks/usePolls";
 import { IPollType } from "../api/types";
+import useStore from "../../../shared/store";
 
 type Props = IBaseComponentProps;
 
@@ -13,25 +14,38 @@ const Poll = ({ className, ...rest }: Props) => {
   const classes = ["poll", className];
   const pollType: IPollType = "all";
 
-  const [disabled, setDisabled ] = useState(false);
+  const [disabled, setDisabled] = useState(false);
   const { data, isError, isLoading, isSuccess } = usePolls({ pollType });
+
+  const addPoll = useStore(({ addPoll }) => addPoll);
+
   console.log(data);
-  const onClick = (description: string, count: number) => {
-    console.log(description, count);
+
+  const onClick = (pollId: string, questionId: string, answerId: string) => {
+    console.log(pollId, questionId, answerId);
     setDisabled(true);
+
+    addPoll(pollId, questionId, answerId);
   };
+
   return (
     <div className="poll-container">
       {isSuccess ? (
         data.map((poll) => (
           <Group mode="plain" key={poll.pollId}>
-            <Card mode="shadow" className={`${classes.join(" ")} ${disabled ? 'disabled' : ''}`}>
+            <Card
+              mode="shadow"
+              className={`${classes.join(" ")} `}
+            >
               <Title level="1">{poll.question.description}</Title>
               {poll.answers.map((answer) => (
                 <Answer
+                  pollId={poll.pollId}
+                  questionId={poll.question.questionId}
+                  answerId={answer.answerId}
                   description={answer.description}
                   count={answer.count}
-                  key={answer.description}
+                  key={answer.answerId}
                   onClick={onClick}
                 ></Answer>
               ))}

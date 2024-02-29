@@ -13,10 +13,12 @@ import {
 
 type Props = IBaseComponentProps &
   IAnswerType & {
-    onClick: (description: string, count: number) => void;
+    pollId: string;
+    questionId: string;
+    onClick: (pollId: string, questionId: string, answerId: string) => void;
   };
 
-const Answer = ({ className, description, count, onClick, ...rest }: Props) => {
+const Answer = ({ className, pollId, questionId, answerId, description, count, onClick, ...rest }: Props) => {
   const classes = ["answer", className].join(" ");
   const negativeType: ProgressProps = { appearance: "negative" };
   const positiveType: ProgressProps = { appearance: "positive" };
@@ -24,7 +26,7 @@ const Answer = ({ className, description, count, onClick, ...rest }: Props) => {
   const [progresType, setProgresType] = useState(negativeType);
 
   const handleClick: MouseEventHandler<HTMLElement> = (event) => {
-    onClick(description, count);
+    onClick(pollId, questionId, answerId);
     setProgresType(positiveType);
   };
 

@@ -1,5 +1,5 @@
 type IAnswerType = {
-  pollId?: string;
+  answerId?: string;
   description: string;
   count: number;
 };
