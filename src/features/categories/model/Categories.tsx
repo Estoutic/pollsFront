@@ -1,21 +1,22 @@
 import React from "react";
 import { IBaseComponentProps } from "src/shared/types";
 import "./Categories.css";
+import {Link} from "react-router-dom";
 
 type Props = IBaseComponentProps;
 
 const categories = [
   {
     name: "Create",
-    link: "create",
+    link: "/create",
   },
   {
     name: "Categories",
-    link: "categories",
+    link: "/categories",
   },
   {
     name: "Records",
-    link: "record",
+    link: "/record",
   },
 ];
 
@@ -25,7 +26,7 @@ const Categories = ({ className, ...rest }: Props) => {
   return (
     <div className={classes}>
       {categories.map((item) => (
-        <a>{item.name}</a>
+        <Link to={item.link}>{item.name}</Link>
       ))}
     </div>
   );

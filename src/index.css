@@ -35,6 +35,7 @@ h1 {
 }
 
 a {
+  text-decoration: none;
   font-size: calc(var(--index));
   color: var(--text-color);
   cursor: pointer;
