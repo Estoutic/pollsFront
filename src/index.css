@@ -26,14 +26,6 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
 }
-
-h1 {
-  font-size: calc(var(--index) * 1.2);
-  line-height: 1.1;
-  font-weight: 400;
-  color: var(--text-color);
-}
-
 a {
   text-decoration: none;
   font-size: calc(var(--index));
@@ -50,7 +42,6 @@ p {
   font-size: calc(var(--index) * 1.5);
 }
 
-
 img {
   position: absolute;
   width: calc(var(--index) * 55);
@@ -61,6 +52,7 @@ img {
 .vkuiText,
 .vkuiParagraph,
 .vkuiTitle--level-1,
+.vkuiTitle--level-2,
 .vkuiFormItem__top {
   font-size: calc(var(--index) * 1);
   color: black;
@@ -89,16 +81,27 @@ img {
   width: 100%;
 }
 
-.vkuiCard{
+.vkuiCard {
   max-width: calc(var(--index) * 3);
-  
 }
 
-.vkuiInternalGroup{
+.vkuiInternalGroup {
   display: flex;
   justify-content: center;
 }
 
-.vkuiSeparator__in{
+.vkuiSeparator__in {
   display: none;
+}
+
+.vkuiTitle--level-1, .vkuiTitle--level-1{
+  font-size: calc(var(--index) * 1.2);
+  line-height: 1.1;
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+.vkuiTitle--level-1{
+  color: var(black);
+
 }

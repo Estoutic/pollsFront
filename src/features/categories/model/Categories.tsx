@@ -22,7 +22,6 @@ const categories = [
 
 const Categories = ({ className, ...rest }: Props) => {
   const classes = ["categories", className].join(" ");
-
   return (
     <div className={classes}>
       {categories.map((item) => (

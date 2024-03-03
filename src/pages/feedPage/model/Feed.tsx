@@ -1,6 +1,6 @@
 import React from "react";
 import { IBaseComponentProps } from "src/shared/types";
-import { Header, Polls } from "../../..//widgets";
+import { Header, Polls } from "../../../widgets";
 import "./Feed.css";
 
 type Props = IBaseComponentProps;

@@ -6,6 +6,7 @@ import "./Poll.css";
 import usePolls from "../api/hooks/usePolls";
 import { IPollType } from "../api/types";
 import useStore from "../../../shared/store";
+import { Title } from "@vkontakte/vkui";
 
 type Props = IBaseComponentProps;
 
@@ -32,7 +33,7 @@ const Polls = ({ className, ...rest }: Props) => {
 
   return (
     <div className="poll-container">
-      {isSuccess ? data.map((poll) => <Poll poll={poll} onClick={onClick}></Poll>) : <h1> Not okey</h1>}
+      {isSuccess ? data.map((poll) => <Poll poll={poll} onClick={onClick}></Poll>) : <Title level="1"> Not okey</Title>}
     </div>
   );
 };

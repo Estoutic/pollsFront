@@ -1,7 +1,7 @@
 import React from "react";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Feed,  CreatePoll, ErrorPage } from "../pages";
+import { Feed, CreatePoll, ErrorPage } from "../pages";
 
 function App() {
   const queryClient = new QueryClient();
@@ -10,7 +10,7 @@ function App() {
     {
       path: "/",
       element: <Feed />,
-      errorElement: <ErrorPage/>
+      errorElement: <ErrorPage />,
     },
     {
       path: "/create",

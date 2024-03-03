@@ -1,0 +1,8 @@
+.create-poll{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 20px;
+    width: 100vw;
+    height: 100vh;
+}

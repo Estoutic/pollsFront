@@ -1,10 +1,11 @@
 import React from "react";
 import "./ErrorPage.css";
 import { Link } from "react-router-dom";
+import { Title } from "@vkontakte/vkui";
 const ErrorPage = () => {
   return (
     <div className="error-page">
-      <h1>404 Not Found</h1>
+      <Title level="1">404 Not Found</Title>
       <Link to='/'>Home</Link>
     </div>
   );

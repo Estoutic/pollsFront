@@ -24,7 +24,7 @@ const Poll = ({ className, poll, onClick, ...rest }: Props) => {
           checkPoll(poll.pollId) ? "disabled" : ""
         }`}
       >
-        <Title level="1">{poll.question.description}</Title>
+        <Title level="2">{poll.question.description}</Title>
         {poll.answers.map((answer) => (
           <Answer
             pollId={poll.pollId}
