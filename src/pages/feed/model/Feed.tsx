@@ -1,6 +1,6 @@
 import React from "react";
 import { IBaseComponentProps } from "src/shared/types";
-import { Header, Poll } from "../../..//widgets";
+import { Header, Polls } from "../../..//widgets";
 import "./Feed.css";
 
 type Props = IBaseComponentProps;
@@ -11,7 +11,7 @@ const Feed = ({ className, ...rest }: Props) => {
   return (
     <div className={classes}>
       <Header></Header>
-      <Poll></Poll> 
+      <Polls></Polls> 
     </div>
   );
 };

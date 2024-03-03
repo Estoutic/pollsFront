@@ -6,8 +6,8 @@ type Props = IBaseComponentProps;
 
 const categories = [
   {
-    name: "Home",
-    link: "feed",
+    name: "Create",
+    link: "create",
   },
   {
     name: "Categories",
